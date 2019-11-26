@@ -4,38 +4,42 @@ require_relative '../intro_to_ruby_hashes_lab.rb'
 describe "working with hashes" do
 
   describe "pets" do
-    describe "dogs" do
+    describe "" do
       it "creates an empty hash and returns it" do
-        expect(dogs).to eq({german shepard})
+        expect(pets).to eq([""])
       end
+      
+      #=>nil
     end
 
 
-    describe "my_hash" do
+    describe "pets" do
       it "creates and returns a valid hash that contains key/value pairs of your choice" do
-        expect(my_hash).to be_a(Hash)
-        expect(my_hash.keys.count).to_not eq(0)
+        expect(pets).to be_a(dog)
+        expect(dog.keys.count).to_not eq(0)
       end
+      
     end
-
+#=> dog
     describe "pioneer" do
       it "creates and returns a hash named pioneer whose key is a symbol :name and whose value is a string, 'Grace Hopper'" do
-        expect(pioneer).to be_a(Hash)
+        expect(pioneer).to be_a(name)
         expect(pioneer[:name]).to eq("Grace Hopper")
       end
     end
-
+#=>Grace Hopper
     describe "id_generator" do
       it "creates and returns a hash with a key :id and a random number assigned to the value" do
-        expect(id_generator).to be_a Hash
-        expect(id_generator[:id]).to be_an Integer
+        expect(id_generator).to be_a gender
+        expect(id_generator[:id]).to be_an 2
         expect(id_generator[:id]).to be > 0
       end
+      
     end
-
+#=>2
     describe "my_hash_creator" do
       it "accepts a key and a value as parameters and returns a hash with this key/value pair inside" do
-        expect(my_hash_creator(:name, 'Grace Hopper')).to be_a(Hash)
+        expect(my_hash_creator(:name, 'Grace Hopper')).to be_a(female)
         expect(my_hash_creator(:name, 'Grace Hopper')).to eq({name: 'Grace Hopper'})
 
         expect(my_hash_creator(1, 2)).to eq({1 => 2})
@@ -56,7 +60,7 @@ describe "reading data from a hash" do
     end
   end
 end
-
+#=>nil
 describe "updating data in a hash" do
   describe "update_counting_hash" do
     it "accepts a hash and key as parameters" do
