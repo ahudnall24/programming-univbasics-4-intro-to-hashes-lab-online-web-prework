@@ -81,5 +81,5 @@ end
       .to eq({ 'number' => 3, 'amount' => 50})
     end
   end
-#=>53
+#=
 end
