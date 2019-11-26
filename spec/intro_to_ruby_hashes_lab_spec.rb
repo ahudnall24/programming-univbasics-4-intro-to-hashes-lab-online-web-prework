@@ -71,7 +71,7 @@ describe "updating data in a hash" do
       expect(update_counting_hash({},'hello')).to eq({'hello' => 1})
       expect(update_counting_hash({total: 5},:age)).to eq({total: 5, age: 1})
     end
-    #=>1
+    #=>6
 
     it "if key is present, returns a hash where the key's value is incremented by 1" do
       expect(update_counting_hash({count: 5},:count)).to eq({count: 6})
